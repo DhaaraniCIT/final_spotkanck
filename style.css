@@ -4,7 +4,7 @@ body{
   margin-bottom: 40px;
   background-color: #f2f2f2;
 }
-#dropdown{
+#dropdown,#input{
   width: 50%;
 }
 textarea{
