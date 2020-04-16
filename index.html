@@ -117,7 +117,7 @@ getch();
           url: "https://codechecker.spotknack.com/check/code?code=" + $('#text').val() + "&lang=" + $('#dropdown').val() + "&input=" + $('#Input').val(),
           success: function (response) {
             //window.alert($('#Input').val());
-           document.getElementById("mess").innerHTML=response.message;
+           document.getElementById("mess").innerHTML=response;
          },
          error: function() {
           $('#mess').html('<p>An error has occurred</p>');
