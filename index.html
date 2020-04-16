@@ -10,36 +10,6 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!--<script type="text/javascript">
-      var get_options;
-      function fetch_select(val)
-      {
-        get_options=val;
-       $.ajax({
-       type: 'post',
-       url: 'fetch_data.php',
-       data: {
-        get_option:val
-       },
-       success: function (response) {
-        document.getElementById("text").innerHTML=response;
-       }
-       });
-      }
-      function Onsubmit()
-      {
-        var code = document.getElementById("text").value;
-        var input = document.getElementById("Input").value;
-        $.ajax({
-          type:'get',
-          url: "https://codechecker.spotknack.com/check/?code=" + code + "&lang=" + get_options + "&input=" + input,
-          success: function (response) {
-            output = JSON.parse(response);
-           document.getElementById("message").innerHTML=output.message;
-          }
-        });
-      }
-    </script>-->
   </head>
   <body>
     <div class="ui container">
@@ -117,7 +87,7 @@ getch();
           url: "https://codechecker.spotknack.com/check/code?code=" + $('#text').val() + "&lang=" + $('#dropdown').val() + "&input=" + $('#Input').val(),
           success: function (response) {
             //window.alert($('#Input').val());
-           document.getElementById("mess").innerHTML=response;
+           document.getElementById("mess").innerHTML=response['responseDate'];
          },
          error: function() {
           $('#mess').html('<p>An error has occurred</p>');
